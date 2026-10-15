@@ -105,3 +105,91 @@ let yearTurning100 = new Date().getFullYear() + (100 - age);
 console.log("My age in days (approximately):", ageInDays);
 console.log("My age in hours (approximately):", ageInHours);
 console.log("The year I will turn 100:", yearTurning100);
+
+console.log("\n--- Task 7.3: Functions ---");
+
+// Function declaration
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+// Function expression
+const add = function (a, b) {
+  return a + b;
+};
+
+// Arrow function
+const multiply = (a, b) => a * b;
+
+// Arrow function with a body
+const divide = (a, b) => {
+  if (b === 0) {
+    return "Cannot divide by zero";
+  }
+  return a / b;
+};
+
+// Test the functions
+console.log(greet("Rodricks"));
+console.log("Addition:", add(10, 5));
+console.log("Multiplication:", multiply(4, 3));
+console.log("Division:", divide(10, 2));
+console.log("Division by zero:", divide(10, 0));
+
+console.log("\n--- Exercise 2: Build These Functions ---");
+
+// 1. Calculate the area of a rectangle
+function calculateArea(width, height) {
+  return width * height;
+}
+
+// 2. Convert Celsius to Fahrenheit
+function celsiusToFahrenheit(celsius) {
+  return (celsius * 9) / 5 + 32;
+}
+
+// 3. Check whether a number is even
+function isEven(number) {
+  return number % 2 === 0;
+}
+
+// 4. Get initials from a full name
+function getInitials(fullName) {
+  return fullName
+    .trim()
+    .split(/\s+/)
+    .map((name) => name.charAt(0).toUpperCase())
+    .join("");
+}
+
+// 5. Reverse a string
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+// Test the functions
+console.log("Rectangle area:", calculateArea(5, 4));
+console.log("25°C in Fahrenheit:", celsiusToFahrenheit(25));
+console.log("Is 8 even?", isEven(8));
+console.log("Initials:", getInitials("John Doe"));
+console.log("Reversed string:", reverseString("JavaScript"));
+
+console.log("\n--- Exercise 3: Default Parameters ---");
+
+function greetWithDefault(name = "Guest", greeting = "Hello") {
+  return `${greeting}, ${name}!`;
+}
+
+console.log(greetWithDefault());
+console.log(greetWithDefault("Alice"));
+console.log(greetWithDefault("Bob", "Hi"));
+
+console.log("\n--- Build: Calculate Tip ---");
+
+function calculateTip(bill, tipPercent = 15) {
+  return (bill * tipPercent) / 100;
+}
+
+// Test the function
+console.log("Tip on KSh 1,000 at 15%:", calculateTip(1000));
+console.log("Tip on KSh 1,000 at 20%:", calculateTip(1000, 20));
