@@ -193,3 +193,117 @@ function calculateTip(bill, tipPercent = 15) {
 // Test the function
 console.log("Tip on KSh 1,000 at 15%:", calculateTip(1000));
 console.log("Tip on KSh 1,000 at 20%:", calculateTip(1000, 20));
+
+console.log("\n--- Task 7.4: Control Flow ---");
+
+// Exercise 1: If/Else Statements
+function getGrade(score) {
+  if (score >= 90) {
+    return "A";
+  } else if (score >= 80) {
+    return "B";
+  } else if (score >= 70) {
+    return "C";
+  } else if (score >= 60) {
+    return "D";
+  } else {
+    return "F";
+  }
+}
+
+// Test the function
+console.log("Score 95:", getGrade(95));
+console.log("Score 82:", getGrade(82));
+console.log("Score 75:", getGrade(75));
+console.log("Score 65:", getGrade(65));
+console.log("Score 40:", getGrade(40));
+
+console.log("\n--- Exercise 2: Switch Statements ---");
+
+function getDayName(dayNumber) {
+  switch (dayNumber) {
+    case 0:
+      return "Sunday";
+    case 1:
+      return "Monday";
+    case 2:
+      return "Tuesday";
+    case 3:
+      return "Wednesday";
+    case 4:
+      return "Thursday";
+    case 5:
+      return "Friday";
+    case 6:
+      return "Saturday";
+    default:
+      return "Invalid day";
+  }
+}
+
+// Test the function
+console.log("Day 0:", getDayName(0));
+console.log("Day 1:", getDayName(1));
+console.log("Day 3:", getDayName(3));
+console.log("Day 6:", getDayName(6));
+console.log("Day 8:", getDayName(8));
+
+console.log("\n--- Exercise 3: Loops ---");
+
+// For loop
+console.log("For loop:");
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+// While loop
+console.log("While loop:");
+let loopCount = 0;
+
+while (loopCount < 5) {
+  console.log(loopCount);
+  loopCount++;
+}
+
+// For...of loop
+console.log("For...of loop:");
+
+const colors = ["red", "green", "blue"];
+
+for (const color of colors) {
+  console.log(color);
+}
+
+console.log("\n--- Challenge 1: Numbers 1-100 ---");
+
+for (let number = 1; number <= 100; number++) {
+  console.log(number);
+}
+
+console.log("\n--- Challenge 2: Even Numbers 1-50 ---");
+
+for (let number = 1; number <= 50; number++) {
+  if (number % 2 === 0) {
+    console.log(number);
+  }
+}
+
+console.log("\n--- Challenge 3: FizzBuzz ---");
+
+for (let number = 1; number <= 100; number++) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    console.log("FizzBuzz");
+  } else if (number % 3 === 0) {
+    console.log("Fizz");
+  } else if (number % 5 === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(number);
+  }
+}
+
+console.log("\n--- Challenge 4: Triangle of Stars ---");
+
+for (let row = 1; row <= 5; row++) {
+  console.log("*".repeat(row));
+}
