@@ -307,3 +307,64 @@ console.log("\n--- Challenge 4: Triangle of Stars ---");
 for (let row = 1; row <= 5; row++) {
   console.log("*".repeat(row));
 }
+
+console.log("\n--- Mini-Project: Calculator ---");
+
+// Addition
+function calculatorAdd(a, b) {
+  return a + b;
+}
+
+// Subtraction
+function calculatorSubtract(a, b) {
+  return a - b;
+}
+
+// Multiplication
+function calculatorMultiply(a, b) {
+  return a * b;
+}
+
+// Division
+function calculatorDivide(a, b) {
+  if (b === 0) {
+    return "Error: Cannot divide by zero";
+  }
+  return a / b;
+}
+
+function calculate(num1, operator, num2) {
+  switch (operator) {
+    case "+":
+      return calculatorAdd(num1, num2);
+
+    case "-":
+      return calculatorSubtract(num1, num2);
+
+    case "*":
+      return calculatorMultiply(num1, num2);
+
+    case "/":
+      return calculatorDivide(num1, num2);
+
+    case "%":
+      return num1 % num2;
+
+    case "**":
+      return num1 ** num2;
+
+    default:
+      return "Invalid operator";
+  }
+}
+
+console.log("\n--- Calculator Tests ---");
+
+console.log("Addition:", calculate(10, "+", 5)); // 15
+console.log("Subtraction:", calculate(10, "-", 5)); // 5
+console.log("Multiplication:", calculate(10, "*", 5)); // 50
+console.log("Division:", calculate(10, "/", 5)); // 2
+console.log("Division by zero:", calculate(10, "/", 0));
+console.log("Modulus:", calculate(10, "%", 3)); // 1
+console.log("Power:", calculate(2, "**", 3)); // 8
+console.log("Invalid operator:", calculate(10, "?", 5));
