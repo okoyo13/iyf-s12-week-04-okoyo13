@@ -37,3 +37,71 @@ console.log("My age is:", myAge);
 console.log("Am I a student?", isStudent);
 console.log("My favorite colors are:", favoriteColors);
 console.log("Today's date is:", today);
+
+console.log("\n--- Task 7.2: Data Types & Operators ---");
+
+// Exercise 1: Number Operations
+let a = 10;
+let b = 3;
+
+console.log("Addition:", a + b);
+console.log("Subtraction:", a - b);
+console.log("Multiplication:", a * b);
+console.log("Division:", a / b);
+console.log("Modulus (remainder):", a % b);
+console.log("Exponentiation:", a ** b);
+
+// Increment and Decrement
+let count = 0;
+count++;
+console.log("After increment:", count);
+
+count--;
+console.log("After decrement:", count);
+
+console.log("\n--- Exercise 2: String Operations ---");
+
+let firstName = "John";
+let lastName = "Doe";
+
+// Concatenation
+let fullName = firstName + " " + lastName;
+console.log("Full name:", fullName);
+
+// Template literals
+let greeting = `Hello, ${firstName}!`;
+let message = `Your name has ${firstName.length} characters.`;
+
+console.log("Greeting:", greeting);
+console.log("Message:", message);
+
+// String methods
+console.log("Uppercase:", fullName.toUpperCase());
+console.log("Lowercase:", fullName.toLowerCase());
+console.log("First character:", firstName.charAt(0));
+console.log("Includes John:", fullName.includes("John"));
+
+console.log("\n--- Exercise 3: Comparison & Logical Operators ---");
+
+// Comparison operators
+console.log("5 > 3:", 5 > 3);
+console.log("5 < 3:", 5 < 3);
+console.log("5 === 5:", 5 === 5);
+console.log('5 == "5":', 5 == "5");
+console.log("5 !== 3:", 5 !== 3);
+
+// Logical operators
+console.log("AND (true && true):", true && true);
+console.log("OR (true || false):", true || false);
+console.log("NOT (!true):", !true);
+
+console.log("\n--- Challenge: Age Calculations ---");
+
+// Use the age variable from Task 7.1
+let ageInDays = Math.round(age * 365.25);
+let ageInHours = ageInDays * 24;
+let yearTurning100 = new Date().getFullYear() + (100 - age);
+
+console.log("My age in days (approximately):", ageInDays);
+console.log("My age in hours (approximately):", ageInHours);
+console.log("The year I will turn 100:", yearTurning100);
