@@ -440,3 +440,74 @@ console.log("First number greater than 10:", firstGreaterThan10);
 // 4. Calculate the product of all numbers
 const product = challengeNumbers.reduce((total, num) => total * num, 1);
 console.log("Product of all numbers:", product);
+
+console.log("\n--- Task 8.2: Objects ---");
+console.log("\n--- Exercise 1: Object Basics ---");
+
+// Creating an object
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  isStudent: false,
+  hobbies: ["reading", "coding", "gaming"],
+  address: {
+    city: "New York",
+    country: "USA",
+  },
+};
+
+// Accessing properties
+console.log("First name:", person.firstName);
+console.log("Last name:", person["lastName"]);
+console.log("City:", person.address.city);
+
+// Modifying properties
+person.age = 31;
+console.log("Updated age:", person.age);
+
+person.email = "john@example.com";
+console.log("Email:", person.email);
+
+delete person.isStudent;
+console.log("Is student property removed:", !("isStudent" in person));
+
+console.log("\n--- Exercise 2: Object Methods ---");
+
+const calculator = {
+  add: function (a, b) {
+    return a + b;
+  },
+
+  subtract(a, b) {
+    return a - b;
+  },
+
+  multiply: (a, b) => a * b,
+};
+
+console.log("Addition:", calculator.add(5, 3));
+console.log("Subtraction:", calculator.subtract(5, 3));
+console.log("Multiplication:", calculator.multiply(5, 3));
+
+console.log("\n--- Exercise 3: Object Iteration ---");
+
+const scores = {
+  math: 95,
+  english: 88,
+  science: 92,
+};
+
+// Get keys
+console.log("Keys:", Object.keys(scores));
+
+// Get values
+console.log("Values:", Object.values(scores));
+
+// Get entries
+console.log("Entries:", Object.entries(scores));
+
+// Loop through the object
+for (const [subject, score] of Object.entries(scores)) {
+  console.log(`${subject}: ${score}`);
+}
