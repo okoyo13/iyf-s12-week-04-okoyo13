@@ -368,3 +368,75 @@ console.log("Division by zero:", calculate(10, "/", 0));
 console.log("Modulus:", calculate(10, "%", 3)); // 1
 console.log("Power:", calculate(2, "**", 3)); // 8
 console.log("Invalid operator:", calculate(10, "?", 5));
+
+console.log("\n--- Task 8.1: Arrays ---");
+
+console.log("\n--- Exercise 1: Array Basics ---");
+
+// Creating arrays
+const fruits = ["apple", "banana", "orange"];
+const numbers = [1, 2, 3, 4, 5];
+const mixed = ["hello", 42, true, null];
+
+// Accessing elements
+console.log("First fruit:", fruits[0]);
+console.log("Number of fruits:", fruits.length);
+
+// Modifying arrays
+fruits.push("grape");
+console.log("After push:", fruits);
+
+fruits.unshift("mango");
+console.log("After unshift:", fruits);
+
+fruits.pop();
+console.log("After pop:", fruits);
+
+fruits.shift();
+console.log("After shift:", fruits);
+
+console.log("\n--- Exercise 2: Array Methods ---");
+
+const arrayNumbers = [1, 2, 3, 4, 5];
+
+// forEach: print each number multiplied by 2
+arrayNumbers.forEach((num) => console.log(num * 2));
+
+// map: create a new array of doubled numbers
+const doubled = arrayNumbers.map((num) => num * 2);
+console.log("Doubled numbers:", doubled);
+
+// filter: keep only even numbers
+const evenNumbers = arrayNumbers.filter((num) => num % 2 === 0);
+console.log("Even numbers:", evenNumbers);
+
+// find: get the first even number
+const firstEven = arrayNumbers.find((num) => num % 2 === 0);
+console.log("First even number:", firstEven);
+
+// reduce: calculate the sum
+const sum = arrayNumbers.reduce((total, num) => total + num, 0);
+console.log("Sum:", sum);
+
+// includes: check whether 3 exists
+console.log("Includes 3:", arrayNumbers.includes(3));
+
+console.log("\n--- Build: Array Challenges ---");
+
+const challengeNumbers = [5, -3, 12, 8, -1, 20];
+
+// 1. Double all numbers
+const doubledNumbers = challengeNumbers.map((num) => num * 2);
+console.log("Doubled numbers:", doubledNumbers);
+
+// 2. Filter out negative numbers
+const positiveNumbers = challengeNumbers.filter((num) => num >= 0);
+console.log("Without negative numbers:", positiveNumbers);
+
+// 3. Find the first number greater than 10
+const firstGreaterThan10 = challengeNumbers.find((num) => num > 10);
+console.log("First number greater than 10:", firstGreaterThan10);
+
+// 4. Calculate the product of all numbers
+const product = challengeNumbers.reduce((total, num) => total * num, 1);
+console.log("Product of all numbers:", product);
