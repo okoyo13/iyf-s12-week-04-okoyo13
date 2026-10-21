@@ -673,3 +673,33 @@ console.log(
 console.log(gradeTracker.generateReportCard("Alice"));
 console.log(gradeTracker.getLetterGrade(95));
 console.log(gradeTracker.getStudent("Bob"));
+
+console.log("\n===== Task 8.4: JSON — Data as Text =====");
+
+// 1. JSON string of posts
+const postsJson =
+  '[{"id":1,"title":"Welcome","likes":12,"published":true},{"id":2,"title":"Draft ideas","likes":0,"published":false},{"id":3,"title":"Week 4 recap","likes":30,"published":true}]';
+
+// 2. Parse the JSON string into an array
+const posts = JSON.parse(postsJson);
+console.log("Parsed posts:", posts);
+
+// 3. Keep only published posts
+const publishedPosts = posts.filter((post) => post.published);
+console.log("Published posts:", publishedPosts);
+
+// 4. Sort by likes, highest first
+const sortedPosts = [...publishedPosts].sort((a, b) => b.likes - a.likes);
+console.log("Sorted posts:", sortedPosts);
+
+// 5. Map posts to strings
+const postSummaries = sortedPosts.map(
+  (post) => `${post.title} (${post.likes} likes)`,
+);
+console.log("Post summaries:", postSummaries);
+
+// 6. Convert the filtered array back to JSON text
+const filteredPostsJson = JSON.stringify(publishedPosts, null, 2);
+console.log("Filtered posts as JSON text:");
+console.log(filteredPostsJson);
+console.log("Data type:", typeof filteredPostsJson);
